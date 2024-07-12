@@ -1,8 +1,10 @@
-*Last Stand
-Descripción
+# Last Stand
+
+## Descripción
+
 Last Stand es un emocionante juego desarrollado en C++ utilizando la biblioteca SFML. En este juego, te enfrentarás a hordas de enemigos mientras intentas sobrevivir el mayor tiempo posible. ¡Demuestra tu habilidad y estrategia para mantenerte en pie!
 
-Requisitos
+## Requisitos
 Para compilar y ejecutar este juego, necesitas tener instalados los siguientes componentes:
 
 C++ Compiler (GCC, Clang, MSVC, etc.)
@@ -36,28 +38,18 @@ cd last-stand
 Compila el código fuente utilizando el compilador de C++ y enlazando la biblioteca SFML. A continuación se muestra un ejemplo de cómo hacerlo con g++:
 
 bash
-Copiar código
+
 g++ -c main.cpp -o main.o
 g++ main.o -o last-stand -lsfml-graphics -lsfml-window -lsfml-system
 Asegúrate de ajustar el comando según la estructura de tu proyecto y los archivos fuente que tengas.
 
-Ejecución
+## Ejecución
 Después de compilar el juego, puedes ejecutarlo con el siguiente comando:
 
 bash
-Copiar código
 ./last-stand
-¡Disfruta jugando a Last Stand y enfrentándote a las hordas de enemigos!
 
-Contribución
-Si deseas contribuir al desarrollo de Last Stand, sigue estos pasos:
-
-Haz un fork de este repositorio.
-Crea una rama nueva (git checkout -b feature/nueva-funcionalidad).
-Realiza tus cambios y commitea (git commit -m 'Añadir nueva funcionalidad').
-Empuja tus cambios a la rama (git push origin feature/nueva-funcionalidad).
-Abre un Pull Request.
-Contacto
+## Contacto
 Si tienes alguna pregunta, sugerencia o
  problema, no dudes en abrir un issue en el repositorio o contactarme directamente a través de mi correo electrónico: criptograma12@gmail.com o lucas.e.saucedo@outlook.com.
 
