@@ -1,7 +1,7 @@
 #include "Parallax.hpp"
 using namespace std;
 
-Parallax::Parallax(){ /// PARALLAX ES LA TECNICA QUE SE MUEVE EL FONDO M¡S NO EL PERSONAJE
+Parallax::Parallax(){ /// PARALLAX ES LA TECNICA QUE SE MUEVE EL FONDO M√ÅS NO EL PERSONAJE
 	last=-1;
 	initiated=false;
 	score=0;
@@ -12,11 +12,11 @@ Parallax::Parallax(){ /// PARALLAX ES LA TECNICA QUE SE MUEVE EL FONDO M¡S NO EL
 		cout<<"Error al cargar la textura resources/sprites/base.png"<<'\n';
 	}
 
-	srand(time(NULL)); /// SEMILLA. SRAND NECESITA UN ARGUMENTO QUE LE DE UNA SEMILLA PARA UNA SECUENCIA DE N∞ ALEATORIOS. TIME ES EL TIEMPO DEL 01/01/70 HASTA HOY. SIEMPRE CAMBIA CUANDO INICIA
+	srand(time(NULL)); /// SEMILLA. SRAND NECESITA UN ARGUMENTO QUE LE DE UNA SEMILLA PARA UNA SECUENCIA DE N¬∞ ALEATORIOS. TIME ES EL TIEMPO DEL 01/01/70 HASTA HOY. SIEMPRE CAMBIA CUANDO INICIA
 
 	obstacles.push_back(Obstacle(obsT,500,100+rand()%250)); ///EL PRIMER PAR DE OBSTACULOS. POSICION EN Y 100+ UN NUMERO ENTRE 250.
-	obstacles.push_back(Obstacle(obsT,850,100+rand()%250)); /// 2∞ """""""
-	obstacles.push_back(Obstacle(obsT,1200,100+rand()%250)); /// 3∞ """""""
+	obstacles.push_back(Obstacle(obsT,850,100+rand()%250)); /// 2¬∞ """""""
+	obstacles.push_back(Obstacle(obsT,1200,100+rand()%250)); /// 3¬∞ """""""
 
 	sf::Sprite spriteBase;
 	spriteBase.setTexture(baseT);
@@ -33,7 +33,7 @@ void Parallax::Update(){
 	for(int i = 0; i < (int)bases.size(); i++){
 		if(bases[i].getPosition().x<-(336*1.5f)){ /// SI LA POSICION DE LA BASE SALE DE LA PANTALLA...
 			sf::Sprite spriteBase=bases[(int)bases.size()-1]; /// UN OBJETO SPRITE QUE COPIA EL ULTIMO ELEMENTO DEL VECTOR BASES
-			spriteBase.setPosition(spriteBase.getPosition().x+336*1.5f,700-112); ///LO UBICA DETR¡S DEL ULTIMO ELEMENTO
+			spriteBase.setPosition(spriteBase.getPosition().x+336*1.5f,700-112); ///LO UBICA DETR√ÅS DEL ULTIMO ELEMENTO
 			bases.push_back(spriteBase); /// LO MANDA AL FONDO DEL VECTOR.
 			bases.erase(bases.begin()+i); ///DESTRUYE LA BASE i/LA PRIMERA
 		}
@@ -43,7 +43,7 @@ void Parallax::Update(){
 		bases[i].move(-2.5f,0);
 	}
 
-	if(!initiated) return; /// SI NO EST¡ INICIADO TERMINA UPDATE, SINO SIGUE ABAJO
+	if(!initiated) return; /// SI NO EST√Å INICIADO TERMINA UPDATE, SINO SIGUE ABAJO
 
 	int ult = (int)obstacles.size()-1;
 	for(int i = 0; i < (int)obstacles.size(); i++){
@@ -53,7 +53,11 @@ void Parallax::Update(){
 			score++;
 		}
 
-		if(obstacles[i].GetPosition().x<=-100) last--,obstacles.erase(obstacles.begin()+i),obstacles.push_back(Obstacle(obsT,obstacles[ult].GetPosition().x+350,100+rand()%250));
+		if(obstacles[i].GetPosition().x<=-100){
+			last--;
+		    	obstacles.erase(obstacles.begin()+i);
+		    	obstacles.push_back(Obstacle(obsT,obstacles[ult].GetPosition().x+350,100+rand()%250));
+		}
 	}
 
 	for(int i = 0; i < (int)obstacles.size(); i++){
