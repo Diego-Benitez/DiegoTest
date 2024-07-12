@@ -59,7 +59,7 @@ Empuja tus cambios a la rama (git push origin feature/nueva-funcionalidad).
 Abre un Pull Request.
 Contacto
 Si tienes alguna pregunta, sugerencia o
- problema, no dudes en abrir un issue en el repositorio o contactarme directamente a través de mi correo electrónico: tu_email@example.com.
+ problema, no dudes en abrir un issue en el repositorio o contactarme directamente a través de mi correo electrónico: criptograma12@gmail.com o lucas.e.saucedo@outlook.com.
 
 
 
