@@ -39,9 +39,8 @@ Compila el código fuente utilizando el compilador de C++ y enlazando la bibliot
 
 bash
 
-g++ -c main.cpp -o main.o
+g++ -c main.cpp Ship.cpp Bullet.cpp Mobs.cpp Obstacle.cpp Parallax.cpp OISound.cpp 
 g++ main.o -o last-stand -lsfml-graphics -lsfml-window -lsfml-system
-Asegúrate de ajustar el comando según la estructura de tu proyecto y los archivos fuente que tengas.
 
 ## Ejecución
 Después de compilar el juego, puedes ejecutarlo con el siguiente comando:
