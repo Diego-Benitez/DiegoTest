@@ -14,10 +14,10 @@ int main(){
 	sf::Texture backT, bulletT, bulletMobsT, mobsT, ShipT;
 	sf::Sprite background;
 
-	if(!bulletT.loadFromFile("resources/sprites/bullet.png")){ ///VER DÓNDE PONERLO EN LAS HPP/CPP
+	if(!bulletT.loadFromFile("resources/sprites/bullet.png")){ ///VER Dï¿½NDE PONERLO EN LAS HPP/CPP
 		cout<<"Error al cargar la textura\n";
 	}
-	if(!bulletMobsT.loadFromFile("resources/sprites/bulletMobs.png")){ ///VER DÓNDE PONERLO EN LAS HPP/CPP
+	if(!bulletMobsT.loadFromFile("resources/sprites/bulletMobs.png")){ ///VER Dï¿½NDE PONERLO EN LAS HPP/CPP
 		cout<<"Error al cargar la textura\n";
 	}
 	if(!mobsT.loadFromFile("resources/sprites/mobs.png")){
@@ -38,7 +38,7 @@ int main(){
 	bool initiated;
 	bool pressed;
 
-	sf::RenderWindow window(sf::VideoMode(1000,700),"Last Stand"); /// TAMAÑO DE LA VENTANA
+	sf::RenderWindow window(sf::VideoMode(1000,700),"Last Stand"); /// TAMAï¿½O DE LA VENTANA
 	window.setFramerateLimit(60); /// SETEAR EL LIMITE DE FRAMES
 
 	pressed=false;
@@ -46,10 +46,10 @@ int main(){
 
 	while(window.isOpen()){ /// BUCLE PRINCIPAL DEL JUEGO
 
-		Ship *ship  = new Ship(110,350,ShipT); /// INICIALIZACIÓN. ASIGNACIÓN DINAMICA DE MEMORIA. ASÍ DESPUÉS ELIMINA DE MEMORIA EL OBJETO SHIP, Y CREA UNO NUEVO.
-		Parallax *parallax = new Parallax(); /// INICIALIZACIÓN
-		initiated=false; /// INICIALIZACIÓN. TODAVIA NO INICIO.
-		uis.Initiated(false); /// INICIALIZACIÓN
+		Ship *ship  = new Ship(110,350,ShipT); /// INICIALIZACIï¿½N. ASIGNACIï¿½N DINAMICA DE MEMORIA. ASï¿½ DESPUï¿½S ELIMINA DE MEMORIA EL OBJETO SHIP, Y CREA UNO NUEVO.
+		Parallax *parallax = new Parallax(); /// INICIALIZACIï¿½N
+		initiated=false; /// INICIALIZACIï¿½N. TODAVIA NO INICIO.
+		uis.Initiated(false); /// INICIALIZACIï¿½N
 		while(true){ /// EJECUCION DEL JUEGO
 			sf::Event event; /// DETECTAR EVENTO
 			while(window.pollEvent(event)){
@@ -73,7 +73,7 @@ int main(){
             }
 
 
-            for(int i = 0;i < bulletsPlayer.size(); i++){ /// ELIMINA EL PROYECTIL JUGADOR AL TOCAR UN OBST Ó SALGA DE LA PANTALLA.
+            for(int i = 0;i < bulletsPlayer.size(); i++){ /// ELIMINA EL PROYECTIL JUGADOR AL TOCAR UN OBST ï¿½ SALGA DE LA PANTALLA.
                 sf::IntRect rectShoot(bulletsPlayer[i].getPosition().x,bulletsPlayer[i].getPosition().y,40,10);
 
                 if(parallax->CollisionBullet(rectShoot)){
@@ -159,14 +159,14 @@ int main(){
                 bulletsPlayer.clear();
 				ship->Death();
 			}
-
+			//test
 			if(ship->GetPosition().y<0||ship->GetPosition().y>700-136){ /// SI PASA ESTO, MUERE. -136 ES EL TAM DEL SUELO
                 bulletmobs.clear();
                 bulletsPlayer.clear();
                 ship->Death();
             }
 
-			if(!sf::Mouse::isButtonPressed(sf::Mouse::Left)){ /// SI NO ESTÁ PRESIONANDO, VUELVE A FALSO
+			if(!sf::Mouse::isButtonPressed(sf::Mouse::Left)){ /// SI NO ESTï¿½ PRESIONANDO, VUELVE A FALSO
 				pressed=false;
 			}
 
