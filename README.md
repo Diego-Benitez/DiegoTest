@@ -33,7 +33,7 @@ Clona este repositorio en tu máquina local:
 
 bash
 Copiar código
-git clone https://github.com/tu_usuario/last-stand.git
+git clone https://github.com/Diego-Benitez/LAST-STAND.git
 cd last-stand
 Compila el código fuente utilizando el compilador de C++ y enlazando la biblioteca SFML. A continuación se muestra un ejemplo de cómo hacerlo con g++:
 
